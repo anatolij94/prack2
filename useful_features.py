@@ -69,3 +69,7 @@ def select_nodes(x, x_array, y_array):
         for i in range(prev_node-3, prev_node+4):
             interp_points.append((x_array[i], y_array[i]))
     return interp_points
+def minmod(a,b):
+    if fabs(a)>fabs(b):
+        return b
+    return a
