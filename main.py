@@ -20,10 +20,10 @@ while(t<t_max):
     ax.clear()
     ax.plot(xn, u_a, label='analytical', color='grey', lw=2)
     ax.plot(xn, u_GOD, label='u_GOD')
-    ax.plot(xn, u_LW, label='u_HAR')
+    ax.plot(xn, u_HAR, label='u_HAR')
     print(t)
     u_GOD=step_GOD(u_GOD,t)
-    u_HAR=step_HAR(u_LW,t)
+    u_HAR=step_HAR(u_HAR,t)
     u_a=[ua(x,t) for x in xn]
     t+=Tau
     plt.legend()
